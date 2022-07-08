@@ -1,0 +1,35 @@
+    var jmlPostingan = prompt("Masukkan jumlah postingan : ");
+    startingPoint = document.getElementsByClassName("_aagw")[jmlPostingan - 1].click();
+
+    const sleep = (milliseconds) => {
+        return new Promise(resolve => setTimeout(resolve, milliseconds))
+    }
+
+    var isLike = prompt("Apakah disuruh menykai postingan : ");
+    var isSave = prompt("Apakah disuruh menyimpan postingan : ");
+
+    async function automate() {
+        while ( document.getElementsByClassName("_aaqf _aaqh")[0] != null) {
+            if (isLike == true ) {
+                document.getElementsByClassName("_aamu _aat0")[0].getElementsByClassName("_abl-")[0].click()
+                console.log("Postingan Disukai")
+            }
+            await sleep(2000)
+        
+            if (isSave == true ) {
+                document.getElementsByClassName("_aamu _aat0")[0].getElementsByClassName("_abl-")[3].click()
+                console.log("Postingan Disimpan")
+            }
+            await sleep(2000)
+        
+            document.getElementsByClassName("_aaqf _aaqh")[0].getElementsByClassName("_abl-")[0].click()
+            console.log("Menuju posting selanjutnya")
+            await sleep(2000)
+        }
+
+        document.getElementsByClassName("_aamu _aat0")[0].getElementsByClassName("_abl-")[0].click()
+        console.log("Postingan Disukai")
+        
+        console.log("Selesai")
+        document.title = "Automasi Selesai";
+    }

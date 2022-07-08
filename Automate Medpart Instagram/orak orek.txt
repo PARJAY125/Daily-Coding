@@ -1,0 +1,9 @@
+bikin apa : automasi like dan save
+
+caranya : 
+    1. input dari nomor berapa?
+    2. disuruh like gak?
+    3. disuruh nyimpen gak?
+
+
+batas automasi javascript : 
