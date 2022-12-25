@@ -1,0 +1,35 @@
+# ### tabel segitiga kebawah
+def makeTableDebug(word, rows) :
+    table = []
+    for i in range(0, rows, 1):
+        table.append([])
+        for j in range(0, rows - i, 1) : 
+            if i == 0 : table[i].append([f'{str(word[j])}'])
+            else : table[i].append([f'{i}{j}'])
+            print(f'{table[i][j]}', end=" ")
+        print("")
+    return table
+
+def makeTable(word, rows) :
+    table = []
+    for i in range(0, rows, 1):
+        table.append([])
+        for j in range(0, rows - i, 1) : 
+            if i == 0 : table[i].append([f'{str(word[j])}'])
+            else : table[i].append([f'{i}{j}'])
+    return table
+
+# function
+def unionJoin(word1, word2) :
+    unionList = []
+    for sw1 in word1 : 
+        for sw2 in word2 : 
+            unionList.append([f'{sw1}{sw2}'])
+    return unionList
+
+### segitiga kebawah print out
+def printTable(table, wordLen) : 
+    for i in range(0, wordLen, 1):
+        for j in range(0, wordLen - i, 1) : 
+            print(f'{table[i][j]}', end=" ")
+        print("")
